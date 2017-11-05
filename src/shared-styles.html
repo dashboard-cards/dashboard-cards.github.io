@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
 
 <!-- shared styles for all views -->
 <dom-module id="shared-styles">
@@ -16,7 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       .card {
         margin: 24px;
-        padding: 16px;
+        padding: 16px 16px 0 16px;
         color: #757575;
         border-radius: 5px;
         background-color: #fff;
@@ -37,8 +38,76 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       h1 {
         margin: 16px 0;
-        color: #212121;
-        font-size: 22px;
+        /*color: #212121;*/
+        /*font-size: 22px;*/
+        @apply --paper-font-display1;
+      }
+      .description {
+        @apply --paper-font-subhead;
+      }
+      .expand {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transition: .28s ease-in-out;
+        -moz-transition: .28s ease-in-out;
+        -ms-transition: .28s ease-in-out;
+        -o-transition: .28s ease-in-out;
+        transition: .28s ease-in-out;
+      }
+      .expanded {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        -webkit-transition: .28s ease-in-out;
+        -moz-transition: .28s ease-in-out;
+        -ms-transition: .28s ease-in-out;
+        -o-transition: .28s ease-in-out;
+        transition: .28s ease-in-out;
+      }
+      .card-line-break {
+        border-top: 1px solid #e8e8e8;
+        padding: 5px 16px;
+        margin: 0 -16px;
+        position: relative;
+      }
+      .metrics-list iron-icon {
+        height: 20px;
+        width: 20px;
+      }
+      .metrics-list {
+        @apply --paper-font-body1;
+      }
+      .flex-horizontal {
+        @apply --layout-horizontal;
+      }
+      .flexchild {
+        @apply --layout-flex;
+      }
+      .flex2child {
+        @apply --layout-flex-2;
+      }
+      .flex3child {
+        @apply --layout-flex-3;
+      }
+      .flex-vertical {
+        @apply --layout-vertical;
+        height: 220px;
+      }
+      .jira-metrics {
+        @apply --layout-flex;
+      }
+      .bold-metric {
+        @apply --paper-font-headline;
+        margin-bottom: -20px;
+        margin-top: 8px;
+      }
+      .description-metric {
+        @apply --paper-font-body2;
       }
     </style>
   </template>

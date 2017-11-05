@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "description": "My App description",
+  "name": "Team Initiatives",
+  "short_name": "Team Initiatives",
+  "description": "A view of all team initiatives",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
