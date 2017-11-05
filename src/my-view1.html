@@ -1,0 +1,112 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      .expand {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transition: .28s ease-in-out;
+        -moz-transition: .28s ease-in-out;
+        -ms-transition: .28s ease-in-out;
+        -o-transition: .28s ease-in-out;
+        transition: .28s ease-in-out;
+      }
+      .expanded {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        -webkit-transition: .28s ease-in-out;
+        -moz-transition: .28s ease-in-out;
+        -ms-transition: .28s ease-in-out;
+        -o-transition: .28s ease-in-out;
+        transition: .28s ease-in-out;
+      }
+      .card-line-break {
+        border-top: 1px solid #e8e8e8;
+        padding: 5px 16px;
+        margin: 0 -16px;
+        position: relative;
+      }
+    </style>
+
+    <div class="card">
+      <p>image placeholder</p>
+      <div class="card-line-break">
+      <div class="circle">XL</div>
+      <h1>Android App</h1>
+      <p>Brand new app for Android which features a modern design, great performance and lower cost of change.</p>
+        </div>
+
+      <paper-button on-click="toggle">More Details</paper-button>
+      <paper-icon-button on-click="toggle" class="expand" icon="my-icons:chevron-right"></paper-icon-button>
+
+      <iron-collapse id="collapse">
+      <section>
+        <p>5M Revenue</p>
+        <p>300K downloads</p>
+        <p>3.5 stars in Google Play Store</p>
+        <p>0.1% crash rate</p>
+      </section>
+      <section>
+        <div class="card-line-break">
+        <!--<a href="https://www.google.com">-->
+          <p>Ma</p>
+          <p>Mobile Apps</p>
+        </div>
+        <!--</a>-->
+      </section>
+      <section>
+        <div class="card-line-break">
+          <p>10</p>
+          <p>sprints</p>
+          <p>199</p>
+          <p>stories</p>
+          <p>234</p>
+          <p>story points</p>
+        </div>
+      </section>
+
+      </iron-collapse>
+
+    </div>
+
+  </template>
+
+  <script>
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
+
+        toggle(e) {
+            this.$.collapse.toggle();
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'PAPER-ICON-BUTTON') {
+                e.target.toggleClass('expanded');
+            }
+        }
+    }
+
+    window.customElements.define(MyView1.is, MyView1);
+  </script>
+</dom-module>
