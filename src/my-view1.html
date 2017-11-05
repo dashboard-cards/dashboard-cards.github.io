@@ -69,11 +69,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <section class="metrics-list">
         <p><iron-icon icon="my-icons:attach-money"></iron-icon>5M Revenue</p>
-        <iron-collapse id="collapse2">
-          <p><iron-icon icon="my-icons:file-download"></iron-icon>300K downloads</p>
-          <p><iron-icon icon="my-icons:star"></iron-icon>3.5 stars in Google Play Store</p>
-          <p><iron-icon icon="my-icons:bug-report"></iron-icon>0.1% crash rate</p>
-        </iron-collapse>
+        <p><iron-icon icon="my-icons:file-download"></iron-icon>300K downloads</p>
+        <p><iron-icon icon="my-icons:star"></iron-icon>3.5 stars in Google Play Store</p>
+        <p><iron-icon icon="my-icons:bug-report"></iron-icon>0.1% crash rate</p>
       </section>
       <section>
         <div class="card-line-break flex-horizontal">
@@ -119,7 +117,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         toggle(e) {
             this.$.collapse.toggle();
-            this.$.collapse2.toggle();
 //            if (e.target.tagName === 'PAPER-ICON-BUTTON') {
 //                e.target.toggleClass('expanded');
 //            }
