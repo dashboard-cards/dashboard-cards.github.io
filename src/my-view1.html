@@ -105,9 +105,66 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     </div>
 
-    <!--<div class="card">-->
-      <!--placehodler text-->
-    <!--</div>-->
+    <div class="card">
+      <div class="image-container">
+        <img src="https://via.placeholder.com/350x230">
+      </div>
+      <div class="card-line-break">
+        <div class="container flex-horizontal">
+          <div class="flexchild">
+            <h1>iPhone App</h1>
+          </div>
+          <div>
+            <div class="circle">XXL</div>
+          </div>
+        </div>
+
+
+        <p class="description">
+          Brand new app for iOS which features a modern design, great performance and lower cost of change.
+        </p>
+
+      </div>
+
+      <!--<paper-button on-click="toggle">More Details</paper-button>-->
+
+
+
+      <section class="metrics-list">
+        <p><iron-icon icon="my-icons:attach-money"></iron-icon>33M Revenue</p>
+        <p><iron-icon icon="my-icons:file-download"></iron-icon>870K downloads</p>
+        <p><iron-icon icon="my-icons:star"></iron-icon>3.5 stars in Google Play Store</p>
+        <p><iron-icon icon="my-icons:bug-report"></iron-icon>0.09% crash rate</p>
+      </section>
+      <section>
+        <div class="card-line-break flex-horizontal">
+          <!--<a href="https://www.google.com">-->
+          <p class="element">Ma</p>
+          <p class="flexchild element-name">Mobile Apps</p>
+          <!--<paper-icon-button on-click="toggle" id="id_4" class="expand" icon="my-icons:chevron-right"></paper-icon-button></h1>-->
+          <!--<paper-tooltip for="id_4" offset="0">More Details</paper-tooltip>-->
+        </div>
+        <!--</a>-->
+      </section>
+        <section>
+          <div class="card-line-break flex-horizontal">
+            <div class="jira-metrics">
+              <p class="bold-metric">15</p>
+              <p class="description-metric">sprints</p>
+            </div>
+            <div class="jira-metrics">
+              <p class="bold-metric">100</p>
+              <p class="description-metric">stories</p>
+            </div>
+            <div class="jira-metrics">
+              <p class="bold-metric">24</p>
+              <p class="description-metric">story points</p>
+            </div>
+        </section>
+
+      </iron-collapse>
+
+    </div>
 
   </template>
 
@@ -116,7 +173,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       static get is() { return 'my-view1'; }
 
         toggle(e) {
-            this.$.collapse.toggle();
+          this.$.collapse.toggle();
 //            if (e.target.tagName === 'PAPER-ICON-BUTTON') {
 //                e.target.toggleClass('expanded');
 //            }
